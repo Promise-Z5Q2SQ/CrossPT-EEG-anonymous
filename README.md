@@ -1,19 +1,19 @@
-# EEG-ImageNet
+# CrossPT-EEG
 
-This is the official repository for the paper "**EEG-ImageNet: A Benchmark for Pre-training and Cross-Time Generalization of EEG-based Visual Decoding**".
+This is the official repository for the paper "**CrossPT-EEG: A Dataset for Pre-training and Cross-Time Generalization of EEG-based Visual Decoding**".
 
 ## Dataset Description
 
 The dataset is available for download through the provided cloud storage(detailed information will be released after review). 
 
-The dataset in EEG-ImageNet contains a total of 63,850 + 24,000 EEG-image pairs from 16 participants, with a total of 22 sessions (i.e., 6 participants took part in two sessions each). 
+The dataset contains a total of 63,850 + 24,000 EEG-image pairs from 16 participants, with a total of 22 sessions (i.e., 6 participants took part in two sessions each). 
 Each EEG data sample has a size of (n_channels, $f_s \cdot T$), where n_channels is the number of EEG electrodes, which is 62 in our dataset; $f_s$ is the sampling frequency of the device, which is 1000 Hz in our dataset; and T is the time window size, which in our dataset is the duration of the image stimulus presentation, i.e., 0.5 seconds.
 Due to ImageNet's copyright restrictions, our dataset only provides the file index of each image in ImageNet and the wnid of its category corresponding to each EEG segment.
 
 ![Data File Storage Structure](./data/fig/data.png)
 **Figure 1**: Schematic Diagram of the Data File Storage Structure. 
 
-**Table 1**: The Statistics of dataset in EEG-ImageNet.
+**Table 1**: The Statistics of dataset.
 
 | #Categories | #Images | #Subjects | #EEG-image pairs | Datasize |
 |-------------|---------|-----------|------------------|----------|
@@ -35,7 +35,7 @@ Ultimately, the dataset we construct includes the EEG signals of participants ex
 ## Benchmark Settings
 
 ![Data File Storage Structure](./data/fig/benchmark.png)
-**Figure 3**: Comparison of the training and testing sets used for each task in EEG-ImageNet.. 
+**Figure 3**: Comparison of the training and testing sets used for each task. 
 
 We conduct evaluations on EEG-based visual decoding with four tasks, **Within-Time** (WT), **Cross-Time** (CT), **Cross-Participant** (CP), and **Pre-training** (PT).
 As shown in Figure 3, WT using 30 images per category for training and 20 images per category for testing. 
