@@ -18,7 +18,7 @@ FREQ_BANDS = {
 
 IMG_DIR = '../data/imageNet_images/'
 
-same_subject_dict = {16: 4, 17: 12, 18: 0, 19: 13, 20: 6}
+same_subject_dict = {16: 4, 17: 12, 18: 0, 19: 13, 20: 6, 21: 1}
 
 
 def wnid2category(wnid, language):
